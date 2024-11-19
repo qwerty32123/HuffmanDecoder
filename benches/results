@@ -1,0 +1,65 @@
+
+Small data test (4 items):
+Simple implementation: 28.3µs - Found 1 items
+Iterator implementation: 2.1µs - Found 1 items
+Bytes implementation: 1.4µs - Found 1 items
+---
+Simple implementation: 2.6µs - Found 1 items
+Iterator implementation: 1.2µs - Found 1 items
+Bytes implementation: 700ns - Found 1 items
+---
+Simple implementation: 2.3µs - Found 1 items
+Iterator implementation: 1µs - Found 1 items
+Bytes implementation: 500ns - Found 1 items
+---
+Simple implementation: 2.2µs - Found 1 items
+Iterator implementation: 1.1µs - Found 1 items
+Bytes implementation: 700ns - Found 1 items
+---
+Simple implementation: 2.3µs - Found 1 items
+Iterator implementation: 1.1µs - Found 1 items
+Bytes implementation: 700ns - Found 1 items
+---
+
+Medium data test (1000 items):
+Simple implementation: 452.9µs - Found 334 items
+Iterator implementation: 195.4µs - Found 334 items
+Bytes implementation: 97.9µs - Found 334 items
+---
+Simple implementation: 460.2µs - Found 334 items
+Iterator implementation: 191.8µs - Found 334 items
+Bytes implementation: 101.7µs - Found 334 items
+---
+Simple implementation: 463.3µs - Found 334 items
+Iterator implementation: 197.1µs - Found 334 items
+Bytes implementation: 97.3µs - Found 334 items
+---
+Simple implementation: 448.9µs - Found 334 items
+Iterator implementation: 189.8µs - Found 334 items
+Bytes implementation: 96.9µs - Found 334 items
+---
+Simple implementation: 449.1µs - Found 334 items
+Iterator implementation: 195.6µs - Found 334 items
+Bytes implementation: 115.4µs - Found 334 items
+---
+
+Large data test (100000 items):
+Simple implementation: 52.2742ms - Found 33334 items
+Iterator implementation: 19.6926ms - Found 33334 items
+Bytes implementation: 12.3381ms - Found 33334 items
+---
+Simple implementation: 49.0331ms - Found 33334 items
+Iterator implementation: 21.6875ms - Found 33334 items
+Bytes implementation: 10.5657ms - Found 33334 items
+---
+Simple implementation: 47.715ms - Found 33334 items
+Iterator implementation: 31.0729ms - Found 33334 items
+Bytes implementation: 12.5093ms - Found 33334 items
+---
+Simple implementation: 52.6525ms - Found 33334 items
+Iterator implementation: 23.5393ms - Found 33334 items
+Bytes implementation: 10.3859ms - Found 33334 items
+---
+Simple implementation: 48.2686ms - Found 33334 items
+Iterator implementation: 21.9156ms - Found 33334 items
+Bytes implementation: 10.4928ms - Found 33334 items
