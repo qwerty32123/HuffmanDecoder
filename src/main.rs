@@ -21,30 +21,6 @@ const CHANNEL_ID: ChannelId = ChannelId::new(CHANNEL);
 const MAX_SHORT_BITS: usize = 8;
 const SHARED_MEMORY_SIZE: usize = 1024 * 1024; // 1MB
 
-// #[tokio::main]
-// async fn main() -> Result<(), Box<dyn std::error::Error>> {
-//
-//
-//     // Example usage
-//     let ids_to_search = vec!["21622".to_string(), "21623".to_string(), "99999".to_string()];
-//
-//     // Try both search methods
-//     let standard_results = searcher.search_standard(&ids_to_search);
-//
-//     // Print results
-//     println!("Standard search results:");
-//     for (id, first_value, second_value) in standard_results {
-//         println!(
-//             "ID: {}, First list value: {:?}, Second list value: {:?}",
-//             id, first_value, second_value
-//         );
-//     }
-//
-// }
-
-
-
-
 
 #[tokio::main]
 async fn main() {
