@@ -1,0 +1,50 @@
+/target
+.idea
+
+# Binary files
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+# Object files
+*.o
+*.obj
+
+# Compiled output
+bin/
+
+# Generated files
+/target/
+debug/
+release/
+
+# RustRover IDE
+.idea/
+*.iml
+.fleet/
+
+# Rust-specific
+**/*.rs.bk
+Cargo.lock
+!Cargo.lock
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Build artifacts
+*.pdb
+
+# Environment
+.env
+.env.local
+
+# Backup files
+*.bak
+*.swp
+*.swo

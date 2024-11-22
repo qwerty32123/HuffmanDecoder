@@ -1,7 +1,5 @@
 use std::cmp::Reverse;
 use std::collections::{BinaryHeap, HashMap};
-use std::fs::File;
-use std::io::Read;
 use crate::huffman::bit_buffer::BitBuffer;
 use crate::huffman::hybrid_lookup_table::HybridLookupTable;
 use crate::huffman::node::Node;
@@ -86,15 +84,6 @@ impl OptimizedHuffmanDecoder {
         }
 
         pos
-    }
-
-    // This function will now be your main entry point
-    pub fn decode_file(&mut self, path: &str) -> Result<Vec<u8>, std::io::Error> {
-        let mut file = File::open(path)?;
-        let mut data = Vec::new();
-        file.read_to_end(&mut data)?;
-
-        Ok(self.decode_to_bytes(&data))
     }
 
     pub fn decode_to_bytes(&mut self, data: &[u8]) -> Vec<u8> {

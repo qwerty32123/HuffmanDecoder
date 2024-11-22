@@ -9,7 +9,11 @@ tracing = "0.1"
 tracing-chrome = "0.7"
 tracing-subscriber = "0.3"
 criterion = "0.5.1"
-
+windows = { version = "0.58.0", features = ["Win32_System_Memory", "Win32_Foundation", "Win32_Security", "Win32_System_Threading"] }
+serenity = "0.12.4"
+tokio = { version = "1.0", features = ["full"] }
+libc = "0.2.164"
+dotenv = "0.15.0"
 [[bench]]
 name = "stock_parser_benchmark"
 harness = false
