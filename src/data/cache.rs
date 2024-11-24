@@ -2,11 +2,10 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::{fmt, fs};
 use std::time::{SystemTime, UNIX_EPOCH};
-use tokio;
 use serde::de::StdError;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct OutfitData(HashMap<String, String>);
+pub struct One(HashMap<String, String>);
 
 #[derive(Debug)]
 pub enum CacheError {
@@ -55,16 +54,17 @@ impl CacheManager {
         Self { cache_duration }
     }
 
-    pub(crate) fn load_cache(&self, filename: &str) -> Result<OutfitData, CacheError> {
+    pub(crate) fn load_cache(&self, filename: &str) -> Result<One, CacheError> {
         let data = fs::read(filename)?;
-        let (timestamp, cached_data): (u64, Vec<u8>) = bincode::deserialize(&data)?;
+        let (_timestamp, cached_data): (u64, Vec<u8>) = bincode::deserialize(&data)?;
 
 
-        let deserialized: OutfitData = bincode::deserialize(&cached_data)?;
+        let deserialized: One = bincode::deserialize(&cached_data)?;
         Ok(deserialized)
     }
 
-    fn save_cache(&self, data: &OutfitData, filename: &str) -> Result<(), CacheError> {
+
+    fn save_cache(&self, data: &One, filename: &str) -> Result<(), CacheError> {
         let serialized = bincode::serialize(&data)?;
         let timestamp = SystemTime::now()
             .duration_since(UNIX_EPOCH)
@@ -79,13 +79,13 @@ impl CacheManager {
     }
 }
 
-pub struct OutfitSearcher {
-    pub first_list: OutfitData,
-    pub second_list: OutfitData,
+pub struct H9123 {
+    pub first_list: One,
+    pub second_list: One,
 }
 
-impl OutfitSearcher {
-    pub fn new(first_list: OutfitData, second_list: OutfitData) -> Self {
+impl H9123 {
+    pub fn new(first_list: One, second_list: One) -> Self {
         Self {
             first_list,
             second_list,
